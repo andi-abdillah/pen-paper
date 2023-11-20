@@ -43,7 +43,7 @@ const Home = () => {
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-4xl">
               <h1 className="mt-20 mb-10 text-4xl xs:text-5xl lg:text-6xl">
-                Learn somehing new today.
+                Learn something new today.
               </h1>
               <Link
                 to="/explore"

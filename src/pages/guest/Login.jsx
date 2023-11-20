@@ -11,9 +11,9 @@ const Login = () => {
         </Helmet>
       </HelmetProvider>
 
-      <div className="flex justify-center w-full min-h-screen bg-primary">
-        <div className="h-max mx-6 my-auto lg:my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
-          <h1 className="max-w-md text-primary text-4xl sm:text-5xl md:text-6xl">
+      <div className="flex justify-center w-screen min-h-screen bg-primary">
+        <div className="mx-6 my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
+          <h1 className="max-w-md hidden sm:block text-primary sm:text-5xl md:text-6xl">
             Join the community.
           </h1>
           <div className="w-full sm:max-w-xs mx-auto mt-16">
