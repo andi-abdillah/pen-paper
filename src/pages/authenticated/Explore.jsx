@@ -2,20 +2,38 @@ import { Helmet } from "react-helmet";
 import Card from "../../components/Card";
 import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { debounce } from "lodash"; // Import debounce from lodash
 import PrimaryButton from "../../components/PrimaryButton";
 import Icon from "../../components/Icon";
 import articles from "../../utils/articles.json";
 
 const Explore = () => {
-  let navigate = useNavigate();
-
-  const filteredArticles = articles.articles.filter(
-    (article) => article.userID !== 3001
-  );
-
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("search"));
+  const [filteredArticles, setFilteredArticles] = useState([]);
   const [visibleItems, setVisibleItems] = useState(4);
+
+  useEffect(() => {
+    // Filter articles based on search keyword in title or content
+    const filtered = articles.articles
+      .filter((article) => article.userID !== 3001)
+      .filter((article) =>
+        search
+          ? article.title.toLowerCase().includes(search.toLowerCase()) ||
+            article.content.toLowerCase().includes(search.toLowerCase())
+          : true
+      );
+
+    setFilteredArticles(filtered);
+  }, [search]);
+
+  // Use debounce to delay the execution of handleChange
+  const debouncedSearch = debounce((value) => setSearch(value), 1000);
+
+  const handleChange = (e) => debouncedSearch(e.target.value);
 
   const handleLoadMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 4);
@@ -56,19 +74,17 @@ const Explore = () => {
             id="search"
             name="search"
             type="text"
-            defaultValue=""
+            defaultValue={search}
             className="pl-12"
             placeholder="Search Topics"
+            onChange={handleChange}
           />
         </div>
         <div className="flex flex-wrap justify-between my-6">
           {filteredArticles.slice(0, visibleItems).map((article, index) => (
             <Card
               key={index}
-              author={article.author}
-              title={article.title}
-              content={article.content}
-              date={article.date}
+              {...article}
               onClick={() => handleCardClick(article.id)}
             />
           ))}

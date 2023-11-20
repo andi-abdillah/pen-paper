@@ -62,22 +62,22 @@ const Home = () => {
           {filteredArticles?.map((article, index) => (
             <Card
               key={index}
-              author={article.author}
-              title={article.title}
-              content={article.content}
-              date={article.date}
+              {...article}
               onClick={() => handleCardClick(article.id)}
             />
           ))}
         </div>
 
-        <div className="fixed bottom-3 md:hidden right-3 text-center dropdown dropdown-top dropdown-end z-[1]">
-          <PrimaryButton tabIndex={0} className="bg-white btn-circle m-1">
-            <Icon className="text-2xl">expand_circle_up</Icon>
+        <div className="fixed bottom-3 right-3 text-center dropdown dropdown-top dropdown-end z-[1] md:hidden">
+          <PrimaryButton
+            tabIndex={0}
+            className="bg-white focus:bg-primary focus:text-white btn-circle m-2 drop-shadow"
+          >
+            <Icon className="text-3xl">expand_circle_up</Icon>
           </PrimaryButton>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] mb-2 p-4 drop-shadow-card bg-base-100 rounded-box w-52"
+            className="dropdown-content z-[1] mb-2 mx-3 p-4 drop-shadow-card bg-base-100 rounded-box w-60"
           >
             <h2 className="mb-6 text-primary font-semibold">
               Discover by topics
