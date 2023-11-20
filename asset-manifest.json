@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pen-paper/static/css/main.0d674477.css",
+    "main.js": "/pen-paper/static/js/main.7c2c1fac.js",
+    "index.html": "/pen-paper/index.html",
+    "main.0d674477.css.map": "/pen-paper/static/css/main.0d674477.css.map",
+    "main.7c2c1fac.js.map": "/pen-paper/static/js/main.7c2c1fac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d674477.css",
+    "static/js/main.7c2c1fac.js"
+  ]
+}
