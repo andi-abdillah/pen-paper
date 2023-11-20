@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/pen-paper/static/css/main.d1a8b705.css",
-    "main.js": "/pen-paper/static/js/main.453fa915.js",
+    "main.css": "/pen-paper/static/css/main.5a0c8788.css",
+    "main.js": "/pen-paper/static/js/main.8d0b3e33.js",
+    "static/media/banner.jpeg": "/pen-paper/static/media/banner.85e7b6e37fd276e40ff7.jpeg",
     "index.html": "/pen-paper/index.html",
-    "main.d1a8b705.css.map": "/pen-paper/static/css/main.d1a8b705.css.map",
-    "main.453fa915.js.map": "/pen-paper/static/js/main.453fa915.js.map"
+    "main.5a0c8788.css.map": "/pen-paper/static/css/main.5a0c8788.css.map",
+    "main.8d0b3e33.js.map": "/pen-paper/static/js/main.8d0b3e33.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1a8b705.css",
-    "static/js/main.453fa915.js"
+    "static/css/main.5a0c8788.css",
+    "static/js/main.8d0b3e33.js"
   ]
 }
