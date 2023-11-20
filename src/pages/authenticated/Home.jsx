@@ -1,9 +1,10 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
 import articles from "../../utils/articles.json";
 import Card from "../../components/Card";
 import Icon from "../../components/Icon";
 import PrimaryButton from "../../components/PrimaryButton";
+import Banner from "../../assets/banner.jpeg";
 
 const Home = () => {
   const topics = [
@@ -25,22 +26,23 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+      </HelmetProvider>
 
       <div className="mb-24">
         <div
           className="hero min-w-full min-h-[24rem] rounded-[20px]"
           style={{
-            backgroundImage:
-              "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+            backgroundImage: `url(${Banner})`,
           }}
         >
-          <div className="hero-overlay bg-opacity-60 rounded-[20px]"></div>
+          <div className="hero-overlay bg-white bg-opacity-30 rounded-[20px]"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-4xl">
-              <h1 className="mt-20 mb-10 text-3xl xs:text-5xl text-black">
+              <h1 className="mt-20 mb-10 text-4xl xs:text-5xl lg:text-6xl">
                 Learn somehing new today.
               </h1>
               <Link
@@ -125,7 +127,9 @@ const Home = () => {
                 className="card w-60 h-14 mb-2 bg-neutral-50 rounded-3xl drop-shadow-card"
               >
                 <div className="card-body p-0">
-                  <h1 className="card-title m-auto text-gray-400">{topic}</h1>
+                  <h4 className="font-semibold m-auto text-lg text-gray-400">
+                    {topic}
+                  </h4>
                 </div>
               </div>
             ))}

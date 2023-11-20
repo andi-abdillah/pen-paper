@@ -3,8 +3,8 @@ import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
 import TextArea from "../../components/TextArea";
 import PrimaryButton from "../../components/PrimaryButton";
-import { Helmet } from "react-helmet";
 import Icon from "../../components/Icon";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const CreateStory = () => {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -21,9 +21,11 @@ const CreateStory = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Create A Story</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Create A Story</title>
+        </Helmet>
+      </HelmetProvider>
 
       <h2 className="mx-2 my-6 text-2xl text-primary font-semibold">
         Create a story

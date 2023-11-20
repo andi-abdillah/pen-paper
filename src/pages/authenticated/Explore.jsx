@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Card from "../../components/Card";
 import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
@@ -45,9 +45,11 @@ const Explore = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Explore</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Explore</title>
+        </Helmet>
+      </HelmetProvider>
 
       <div>
         <h1 className="text-3xl xs:text-5xl mb-8">Explore</h1>
@@ -80,7 +82,7 @@ const Explore = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex flex-wrap justify-between my-6">
+        <div className="flex flex-wrap justify-between mt-6">
           {filteredArticles.slice(0, visibleItems).map((article, index) => (
             <Card
               key={index}

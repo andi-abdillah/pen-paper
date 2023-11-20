@@ -13,6 +13,10 @@ module.exports = {
       screens: {
         xs: "475px",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        newsreader: ["Newsreader", "serif"],
+      },
     },
   },
   plugins: [require("daisyui")],

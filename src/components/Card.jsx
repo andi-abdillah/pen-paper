@@ -7,10 +7,10 @@ const Card = ({ author, title, content, date, onClick }) => {
       : content;
 
   return (
-    <div className="card max-w-[525px] mb-10 bg-neutral-50 rounded-3xl drop-shadow-card">
+    <div className="card max-w-[525px] text-black mb-10 bg-neutral-50 rounded-3xl drop-shadow-card">
       <div className="card-body">
-        <h1 className="text-lg">{author}</h1>
-        <h2 className="card-title text-3xl">{title}</h2>
+        <h2 className="text-lg">{author}</h2>
+        <h1 className="card-title text-3xl">{title}</h1>
         <p>
           <b>{slicedContent}</b> - {date}
         </p>

@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import TextInput from "../../components/TextInput";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Register = () => {
   return (
     <>
-      <Helmet>
-        <title>Register</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Register</title>
+        </Helmet>
+      </HelmetProvider>
 
       <div className="flex justify-center items-center w-screen min-h-screen bg-primary">
         <div className="mx-6 my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">

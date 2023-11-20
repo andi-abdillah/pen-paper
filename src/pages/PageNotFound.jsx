@@ -1,12 +1,15 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
   return (
     <>
-      <Helmet>
-        <title>404 Page Not Found</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>404 Page Not Found</title>
+        </Helmet>
+      </HelmetProvider>
+
       <div class="text-center m-20">
         <h1 class="mb-4 text-6xl font-semibold text-red-500">404</h1>
         <p class="mb-4 text-lg text-gray-600">Oops! Looks like you're lost.</p>

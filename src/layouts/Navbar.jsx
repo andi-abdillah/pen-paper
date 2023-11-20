@@ -64,7 +64,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li className={path.myProfile ? mediumActive : mediumInActive}>
-              <Link to="/my-profile">My Profile</Link>
+              <Link to="/my-profile">Profile</Link>
             </li>
             <li className={path.yourStories ? mediumActive : mediumInActive}>
               <Link to="/your-stories">Your Stories</Link>
@@ -78,7 +78,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="font-bold text-xl md:text-3xl text-primary">
+        <Link
+          to="/"
+          className="font-bold text-2xl md:text-3xl text-primary font-newsreader"
+        >
           Pen & Paper
         </Link>
       </div>
@@ -92,7 +95,7 @@ const Navbar = () => {
             <Link to="/your-stories">Your Stories</Link>
           </li>
           <li className={path.myProfile ? largeActive : largeInActive}>
-            <Link to="/my-profile">My Profile</Link>
+            <Link to="/my-profile">Profile</Link>
           </li>
           <li className={path.home ? largeActive : largeInActive}>
             <Link to="/">Home</Link>

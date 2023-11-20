@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Divider from "../../components/Divider";
 import BackButton from "../../components/BackButton";
 import { useParams } from "react-router-dom";
@@ -33,9 +33,11 @@ const StoryDetails = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Story Details</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Story Details</title>
+        </Helmet>
+      </HelmetProvider>
 
       <div>
         <h1 className="text-3xl xs:text-5xl mb-8">{article.title}</h1>
