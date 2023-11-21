@@ -16,10 +16,6 @@ const Stories = () => {
     setMyArticles(foundArticles);
   }, []);
 
-  const handleCardClick = (id) => {
-    navigate(`/story-details/${id}`);
-  };
-
   return (
     <>
       <PrimaryButton onClick={() => navigate("create")}>
@@ -28,14 +24,7 @@ const Stories = () => {
 
       <div className="flex flex-wrap justify-between mt-8">
         {myArticles.map((article, index) => (
-          <Card
-            key={index}
-            author={article.author}
-            title={article.title}
-            content={article.content}
-            date={article.date}
-            onClick={() => handleCardClick(article.id)}
-          />
+          <Card key={index} {...article} />
         ))}
       </div>
     </>

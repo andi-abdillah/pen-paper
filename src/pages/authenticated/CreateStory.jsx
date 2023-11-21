@@ -5,6 +5,7 @@ import TextArea from "../../components/TextArea";
 import PrimaryButton from "../../components/PrimaryButton";
 import Icon from "../../components/Icon";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import BackButton from "../../components/BackButton";
 
 const CreateStory = () => {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -26,6 +27,8 @@ const CreateStory = () => {
           <title>Create A Story</title>
         </Helmet>
       </HelmetProvider>
+
+      <BackButton />
 
       <h2 className="mx-2 my-6 text-2xl text-primary font-semibold">
         Create a story

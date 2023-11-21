@@ -10,6 +10,7 @@ import Register from "./pages/guest/Register";
 import Stories from "./pages/authenticated/Stories";
 import CreateStory from "./pages/authenticated/CreateStory";
 import StoryDetails from "./pages/authenticated/StoryDetails";
+import UserProfile from "./pages/authenticated/UserProfile";
 // import WelcomePage from "./pages/guest/WelcomePage";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="story-details/:id" element={<StoryDetails />} />
           <Route path="explore" element={<Explore />} />
           <Route path="my-profile" element={<MyProfile />} />
+          <Route path="user-profile/:id" element={<UserProfile />} />
         </Route>
         {/* <Route path="/" element={<WelcomePage />} /> */}
         <Route path="*" element={<PageNotFound />} />

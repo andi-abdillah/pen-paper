@@ -3,98 +3,142 @@
     {
       "id": 1,
       "userID": 3002,
-      "author": "Author 2",
-      "title": "Article Title 1",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quis animi tempora eligendi tenetur iure amet eaque voluptatibus atque incidunt cumque ab nobis soluta mollitia assumenda? Ratione, placeat. Suscipit beatae ipsum sequi nam accusamus minima repellendus ratione libero sit? Qui a illo consequuntur. Enim eius perspiciatis doloribus! Minima blanditiis aliquam illum voluptates a dolores sit rem, ad, debitis deserunt magni aspernatur ut dolor tenetur distinctio dolore atque nam adipisci delectus fugit natus officiis. Nostrum voluptate asperiores modi voluptatem officia necessitatibus repellendus velit non ipsa, rerum nihil, culpa ipsam nobis amet, ea recusandae molestias animi odio at et? Quisquam numquam incidunt temporibus fugit, tempore consequatur exercitationem at voluptatum placeat distinctio quia aliquid ea quasi odio et hic unde nisi quos explicabo delectus inventore eius iste illum rerum? Impedit nulla saepe quo dicta, aut placeat quibusdam soluta enim laboriosam nobis molestias animi consequuntur ea cupiditate, corrupti debitis, sapiente dolor. Expedita illum ipsam voluptatibus earum rem quos totam, cupiditate, aspernatur ea at fuga excepturi aut vitae deserunt necessitatibus. Ipsum doloremque velit assumenda veniam ipsa culpa et, veritatis modi ducimus debitis sapiente esse, beatae quae amet autem magnam perferendis ipsam quia delectus consectetur. Unde sapiente praesentium beatae reprehenderit laudantium mollitia commodi architecto possimus animi exercitationem voluptas officiis deserunt, ducimus maxime? Deserunt cumque consequatur omnis explicabo eius tenetur voluptatem maiores officia consectetur. Ea necessitatibus id nulla fugiat tempora beatae maiores voluptates cupiditate voluptate quis, assumenda repellendus corrupti minus dolorum odio deserunt. Doloremque nihil est excepturi itaque cumque, aspernatur magni quisquam esse velit ea atque adipisci alias dolorum! Minima saepe quis reiciendis nobis, doloremque, deleniti odio fugiat ipsum est vitae nihil eius. Nulla sapiente optio labore. Veniam aperiam quos neque consequuntur voluptatem est amet voluptatum animi beatae ducimus corporis sapiente ratione labore culpa quia magnam ipsam optio distinctio, id nisi repellat. Culpa officiis ea porro nulla voluptatem. Assumenda voluptatum earum illum asperiores eligendi commodi fugit, magni modi soluta alias necessitatibus quisquam veniam perferendis fuga corrupti aspernatur.",
+      "title": "Exploring the Wonders of Deep Learning",
+      "content": "In the realm of technology, deep learning stands out as a fascinating and transformative field. Delving into the intricate layers of neural networks, researchers and engineers unravel the secrets of artificial intelligence. The journey through the vast landscapes of data and algorithms unveils unprecedented possibilities, shaping the future of intelligent systems.",
       "date": "November 1, 2023"
     },
     {
       "id": 2,
       "userID": 3001,
-      "author": "Author 1",
-      "title": "Article Title 2",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempora accusamus reiciendis molestiae enim provident voluptate beatae voluptatum eaque porro fugit similique veniam, nulla perferendis? Sunt atque ea excepturi cupiditate fuga. Esse dolorem, optio voluptatum assumenda porro praesentium, labore vitae, ducimus tenetur enim eveniet quae at debitis cumque. Tempore adipisci, ea quaerat tempora voluptates aspernatur amet similique minus perferendis itaque, tenetur saepe quas architecto. Repudiandae sapiente nobis obcaecati iste quam, nesciunt voluptatum accusamus, tenetur ipsum suscipit illum assumenda impedit eaque nihil pariatur officia quis. Aut animi fuga labore? Nesciunt numquam esse, velit deleniti sunt incidunt assumenda iure ab quia neque rerum dicta ducimus ex voluptates cupiditate voluptatum similique aliquid quod recusandae! Voluptatem sequi nulla voluptatibus temporibus tempora debitis praesentium, doloribus sunt labore ad atque ut beatae. Perferendis totam placeat sequi est veritatis quidem, nisi excepturi, ab dignissimos quo voluptas, impedit veniam? Placeat fugit nisi laboriosam distinctio asperiores alias iusto sapiente, excepturi tempora debitis, error fuga, corporis sed dolorem velit. Ut quas ex totam! Iusto perferendis iste, modi dicta hic saepe dignissimos enim delectus aut consectetur accusantium sequi nesciunt soluta, perspiciatis sapiente dolore sunt? Voluptas consequatur porro hic tempore eveniet reprehenderit dolores commodi. Laudantium doloribus cupiditate accusantium enim quibusdam molestiae non aspernatur perspiciatis harum magni consectetur distinctio veniam ipsam, deleniti, officiis architecto! Aperiam dicta aut dolorem quas deleniti quidem obcaecati tempore eveniet repellendus ipsa accusamus maxime, similique maiores alias nulla enim doloremque, reiciendis vitae beatae possimus dignissimos sint consequatur atque voluptatem? Minus eum qui, alias quod blanditiis ipsum autem fugiat tempora sit temporibus sed voluptas vero at, laudantium mollitia magni totam nam saepe modi excepturi ad facilis. Possimus, numquam! Aliquid, consectetur eum aliquam qui cum quam nemo illum quidem sint dolorum ipsam, consequuntur id. Assumenda reiciendis molestiae non doloremque ratione sit incidunt itaque consequatur, voluptatum similique veniam odit possimus autem alias numquam culpa. Quas, possimus? Ullam accusantium deserunt sit, necessitatibus quam repellendus, labore distinctio, iure ducimus tempora aspernatur eum quo voluptatum?",
+      "title": "The Quantum Frontier: Unraveling Mysteries",
+      "content": "Embarking on a quest into the quantum realm, scientists push the boundaries of our understanding. The enigmatic world of quantum physics, with its superposition and entanglement, opens doors to revolutionary technologies. As we navigate through the complexities of quantum computing and cryptography, a new era of possibilities emerges.",
       "date": "November 2, 2023"
     },
     {
       "id": 3,
       "userID": 3001,
-      "author": "Author 1",
-      "title": "Article Title 3",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem suscipit dolorem ipsa ab nemo, minima magni sint pariatur sunt aut eum culpa, eveniet obcaecati voluptates quasi ratione praesentium quidem omnis vel similique ipsam itaque reprehenderit placeat. Laboriosam soluta exercitationem, enim assumenda quidem consequatur. Molestiae, iusto laborum. Error mollitia iusto eaque soluta nulla quo quod aperiam magnam necessitatibus dignissimos nesciunt, veniam sint iste architecto, aliquid possimus nihil? Mollitia molestiae illum inventore nesciunt explicabo amet. Ad harum facere corrupti voluptates, magnam reiciendis voluptatem ex officiis. Fugit eos quidem dolorem repudiandae, est ratione quo consectetur ad quisquam commodi totam recusandae non optio autem! Iusto quas debitis modi dicta quidem unde odio dignissimos repellendus quam officiis est cupiditate tempore voluptatem, accusantium ratione! Commodi, delectus veritatis! Ducimus dicta maxime amet voluptate quidem! Quam architecto, aperiam praesentium voluptatibus ratione deleniti cum laudantium. Veniam amet ipsum ipsa quidem, dignissimos pariatur quas dicta accusamus earum sit officiis.",
+      "title": "Beyond Horizons: Exploring Exoplanets",
+      "content": "Venturing into the cosmos, astronomers unveil the mysteries of distant worlds. With advancements in telescope technology and space exploration, the discovery of exoplanets becomes a thrilling odyssey. From analyzing atmospheres to identifying potential habitable zones, each revelation sparks our imagination about extraterrestrial life.",
       "date": "November 3, 2023"
     },
     {
       "id": 4,
-      "userID": 3006,
-      "author": "Author 6",
-      "title": "Article Title 4",
-      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse voluptate aperiam ducimus maiores sit quod nihil odio suscipit ut porro iusto numquam saepe veritatis velit, mollitia illo magnam earum incidunt inventore minus autem. Error sequi nesciunt, aut, eum iste, quod maxime eveniet nam perferendis facilis illum ratione! Similique quidem excepturi molestiae fugit quibusdam vitae ratione expedita ipsam aliquam. Ad blanditiis officia praesentium omnis molestias aut. Tempora beatae nam unde consectetur perferendis nihil minus excepturi porro eligendi, neque, atque ad nemo, ut eos asperiores iusto. Ex cupiditate ipsam laudantium veritatis quis dolor, delectus architecto voluptas quasi illum temporibus, officiis aliquam distinctio nulla dolore id perspiciatis voluptatem hic ut quo eaque eum et. Consectetur ipsam odio ratione voluptatum molestias excepturi officia doloribus. Voluptatibus, facilis quis! Quia, itaque? Saepe aliquid ducimus hic ea veniam unde nostrum. Doloremque quos officiis molestias eos enim ea atque natus iste est fugit totam eaque, nihil impedit aut, quasi, omnis repudiandae exercitationem corrupti? Aut, quisquam ratione unde porro odio ducimus nostrum fuga libero sint vel dolorum modi harum sed, expedita obcaecati assumenda, provident explicabo? Rerum quaerat libero ipsum accusantium. Quia cupiditate reiciendis, deleniti nihil quisquam reprehenderit, molestias aspernatur deserunt velit officia facilis excepturi temporibus ad dolore aut cumque soluta totam suscipit fuga ea dolorem? Amet a, ex ipsum vero esse magni rem fugiat autem quasi ipsam? Odit ad possimus sunt hic! Neque nisi minus ducimus maxime deleniti debitis? Nostrum eligendi saepe veritatis explicabo reprehenderit sint minima nihil, sunt incidunt corrupti provident doloremque cumque accusantium, inventore magni sed quis!",
+      "userID": 3003,
+      "title": "Revolutionizing Green Energy: Solar Innovations",
+      "content": "In the pursuit of sustainable energy, solar innovations take center stage. Breakthroughs in photovoltaic technology and energy storage propel us towards a greener future. Exploring the intersection of efficiency and environmental impact, these advancements promise to reshape the landscape of renewable energy sources.",
       "date": "November 4, 2023"
     },
     {
       "id": 5,
-      "userID": 3008,
-      "author": "Author 8",
-      "title": "Article Title 5",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptas impedit dolorum ut provident, cupiditate repellat rerum totam quaerat nam ab omnis nulla quod mollitia, reiciendis aspernatur architecto pariatur voluptates eum dolores fuga! Sequi quisquam autem, voluptates quis cupiditate, vero magni aperiam placeat nemo animi debitis voluptate? Quidem vitae, libero magnam quasi eligendi assumenda doloribus nam autem eveniet quae commodi provident iste quibusdam dignissimos in rerum cumque adipisci? Animi unde adipisci iste, omnis commodi aspernatur pariatur assumenda nesciunt nisi ratione itaque dolor aliquid vero nam laudantium deserunt vitae exercitationem laborum in aut voluptatem! Quaerat quasi laboriosam impedit omnis a excepturi nihil, mollitia quae earum amet minus repellat atque blanditiis quis vitae iusto non quod itaque, autem porro molestias, quidem ratione?",
+      "userID": 3007,
+      "title": "Marvels of Marine Biology: Unveiling Ocean Mysteries",
+      "content": "Beneath the waves, a world of wonders awaits in the field of marine biology. Scientists delve into the intricate ecosystems of the ocean, unraveling the secrets of marine life. From the deep-sea abyss to vibrant coral reefs, each discovery enhances our understanding of the interconnected web of marine biodiversity.",
       "date": "November 5, 2023"
     },
     {
       "id": 6,
       "userID": 3006,
-      "author": "Author 6",
-      "title": "Article Title 6",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum esse facere quis veritatis sit iure quo est fugiat! Earum quae possimus mollitia molestias sint magnam molestiae veritatis amet cum, quos nemo recusandae magni? A reiciendis magnam unde quis iusto eligendi voluptas eum iure ducimus placeat nesciunt voluptatibus maxime corrupti sit numquam voluptates iste atque harum cum, suscipit consectetur! Doloremque quisquam obcaecati vero illo nam natus consequuntur quis, iusto dolore accusamus ut corrupti ea, culpa deserunt. Officiis, architecto nulla voluptatum ratione necessitatibus quo. Vel, obcaecati. Esse accusantium perspiciatis possimus sequi doloremque, eaque eveniet repellendus molestias voluptatibus, similique et dolores maxime incidunt quam id delectus nam molestiae in voluptatum alias necessitatibus consequatur? Repellendus ad quas hic accusantium unde maiores beatae reprehenderit voluptates perferendis fuga voluptatum cupiditate a consequuntur ipsam sint deleniti quaerat cum facere totam modi, id eum. Inventore nostrum, non voluptas cupiditate eius hic expedita adipisci harum distinctio laudantium repellat, neque voluptatibus obcaecati amet maiores voluptatum dolorem provident exercitationem ab. Tempora doloremque, delectus eveniet officia aspernatur harum. Ab, magni! Quibusdam dolores, praesentium ut fugit soluta commodi. Eum eligendi enim quis accusamus?",
+      "title": "The Art and Science of Astrophotography",
+      "content": "Combining artistry with scientific precision, astrophotography captures the awe-inspiring beauty of the cosmos. Through state-of-the-art telescopes and imaging techniques, photographers unveil the celestial wonders that adorn our night sky. Each photograph narrates a cosmic tale, merging the realms of art and science.",
       "date": "November 6, 2023"
     },
     {
       "id": 7,
       "userID": 3006,
-      "author": "Author 6",
-      "title": "Article Title 7",
-      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quisquam reiciendis adipisci inventore, maxime aliquam harum non, ad voluptatem tempore assumenda. Nisi maxime at maiores eaque ipsam unde consequatur, distinctio voluptatibus, ex officiis ab deleniti. Quas cupiditate explicabo, at necessitatibus accusamus voluptatum molestiae odio. Sed mollitia soluta asperiores? Ex reiciendis ut ullam ea corporis, dicta harum tempore. Saepe expedita at cum atque nostrum. Molestiae ut maxime non minima illo dolore? Laudantium impedit, hic distinctio explicabo, adipisci numquam placeat id rem recusandae, iusto mollitia sequi dolore praesentium nam. Repudiandae, earum! Explicabo soluta molestias vel sit, ipsum quo numquam cupiditate, eligendi laudantium omnis aliquam? Ipsam explicabo blanditiis quia voluptatem minus ratione officiis vel distinctio dicta eum sit perferendis voluptates unde esse impedit vitae hic, maxime dolorem facilis veritatis ipsum suscipit dignissimos! Rerum, ipsa! Nulla perferendis, fugiat eius, porro quae deleniti corporis reiciendis, cupiditate nisi sint ullam at amet nihil provident adipisci nobis quo quas laudantium nostrum praesentium. Id laudantium quam asperiores quae consequatur, ea odit officia quibusdam magnam repudiandae? Sequi cumque mollitia cum ipsam facere ad aliquam sed porro perspiciatis, magni aspernatur consequuntur voluptatibus voluptate quod laboriosam earum dolor ducimus asperiores error nulla quasi aliquid quo minima! Nostrum blanditiis totam adipisci, ea aspernatur sit, provident expedita nulla sapiente dicta minus. Eum aspernatur, ab beatae quos vitae, a saepe aliquam ducimus expedita voluptatem officia quod labore, at dicta eaque. Natus, molestias placeat facilis beatae rem sapiente aspernatur qui nobis officia commodi magni fuga, odit repellendus. Culpa iure facilis deserunt reiciendis possimus est error eos cumque officia, optio eum?",
+      "title": "Culinary Alchemy: The Fusion of Science and Gastronomy",
+      "content": "In the realm of culinary arts, a new frontier emerges as chefs embrace the principles of molecular gastronomy. Exploring the science behind flavors and textures, culinary alchemists transform ordinary ingredients into extraordinary culinary experiences. The marriage of science and gastronomy creates a symphony for the senses.",
       "date": "November 7, 2023"
     },
     {
       "id": 8,
       "userID": 3005,
-      "author": "Author 5",
-      "title": "Article Title 8",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptas impedit dolorum ut provident, cupiditate repellat rerum totam quaerat nam ab omnis nulla quod mollitia, reiciendis aspernatur architecto pariatur voluptates eum dolores fuga! Sequi quisquam autem, voluptates quis cupiditate, vero magni aperiam placeat nemo animi debitis voluptate? Quidem vitae, libero magnam quasi eligendi assumenda doloribus nam autem eveniet quae commodi provident iste quibusdam dignissimos in rerum cumque adipisci? Animi unde adipisci iste, omnis commodi aspernatur pariatur assumenda nesciunt nisi ratione itaque dolor aliquid vero nam laudantium deserunt vitae exercitationem laborum in aut voluptatem! Quaerat quasi laboriosam impedit omnis a excepturi nihil, mollitia quae earum amet minus repellat atque blanditiis quis vitae iusto non quod itaque, autem porro molestias, quidem ratione?",
+      "title": "The Renaissance of Urban Architecture",
+      "content": "Cities around the world witness a renaissance in urban architecture, blending innovation with sustainable design. From vertical gardens to smart infrastructure, architects redefine city skylines. This architectural revolution not only reshapes urban landscapes but also reflects a commitment to a harmonious coexistence with the environment.",
       "date": "November 8, 2023"
     },
     {
       "id": 9,
       "userID": 3004,
-      "author": "Author 4",
-      "title": "Article Title 9",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati ad, nulla ipsa dolore eligendi eveniet vel, tempora blanditiis esse quisquam saepe. Nesciunt, doloremque unde quaerat doloribus repudiandae expedita deserunt iusto? Corporis inventore incidunt voluptatibus, a animi dolore illo soluta molestiae labore neque voluptate deserunt unde quia fugiat qui excepturi odio voluptas tempore ipsum nihil harum quis enim quae minus? Quibusdam cupiditate accusantium consectetur animi ratione laudantium obcaecati blanditiis asperiores, illo rerum vel eaque cumque, incidunt quia error excepturi consequuntur enim deserunt iste doloribus assumenda eligendi quaerat magni non? Nobis reprehenderit minima molestiae magni nisi optio blanditiis, eos quis et officiis praesentium, cupiditate sint delectus expedita. Sed nemo repellendus quibusdam esse ducimus est vel quae? Ullam nam deserunt recusandae tempore perspiciatis praesentium aliquam pariatur doloribus animi eveniet. Rem, iste ipsam iure doloribus sed asperiores ipsum fugit hic incidunt reiciendis voluptas qui repudiandae obcaecati eos maiores fuga, velit porro quas a id? Odio hic beatae consectetur velit molestias, blanditiis sed nostrum facilis et, quos facere magnam laboriosam deserunt. Quisquam veniam, odit a quasi in placeat cumque vitae soluta esse tempora dolores rem et. Cumque, sequi nesciunt qui possimus modi repudiandae consequatur veritatis aperiam animi autem nulla provident voluptatibus hic et quis quo architecto. Nemo nostrum impedit modi inventore minima eligendi sint aperiam, officiis assumenda repellendus reprehenderit rem suscipit dolore, eum dolores?",
+      "title": "Epicurean Explorations: Culinary Adventures Unveiled",
+      "content": "Embark on a culinary journey as we explore the diverse landscapes of gastronomy. From street food delights to haute cuisine, epicurean adventures unveil the rich tapestry of global flavors. Each dish tells a story, connecting us to cultures and traditions through the delightful language of food.",
       "date": "November 9, 2023"
     },
     {
       "id": 10,
       "userID": 3004,
-      "author": "Author 4",
-      "title": "Article Title 10",
-      "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore eveniet at voluptatum necessitatibus voluptate odit, itaque quasi, illo reiciendis quaerat officia sit beatae tempora eos dolores expedita ipsa adipisci officiis. Porro sint repellat aperiam obcaecati eum est dolore, dolorem autem consequatur iure. In labore delectus ipsa fugit provident tempore ea quae, nobis expedita et porro adipisci ducimus quisquam eum optio suscipit rerum iste ex! Nesciunt voluptatum laudantium et, tempore dicta eaque repudiandae itaque impedit, distinctio aliquam provident qui dolorum deleniti quisquam commodi? Quidem ea quis numquam quae veniam officia at. Necessitatibus error numquam, enim delectus ab doloremque nobis quasi nisi amet, nostrum repellat vitae iure sunt beatae quis cupiditate voluptatum officiis? Commodi quis aliquam, obcaecati temporibus ipsa voluptatibus quaerat exercitationem saepe beatae? Ratione, aperiam. Iusto, beatae excepturi cumque animi iure ipsum itaque autem velit error pariatur esse praesentium modi veritatis doloremque dicta? Unde quos soluta corrupti laborum rerum. Perferendis in excepturi animi eveniet suscipit ex architecto enim repellat aut molestias voluptas officia a ratione quam tempore accusantium sit, dolore cupiditate nostrum quidem mollitia quisquam. Mollitia odio voluptas perferendis, commodi reiciendis quos aliquam dolore porro, velit aspernatur sint consequatur repellendus! Autem magni consequuntur incidunt dolore vero eius possimus velit? Dolore incidunt aliquam quis laboriosam autem consequuntur et sint nobis mollitia recusandae asperiores, ab sapiente labore nulla laborum. Commodi, reprehenderit est tempora accusantium labore, recusandae quisquam harum, numquam beatae officiis magnam architecto cupiditate ad ipsa saepe animi magni molestiae odit fugiat eius suscipit voluptatum ullam quod eveniet? Hic voluptas quos voluptatum atque numquam laudantium veniam doloribus incidunt in ab officia quas, assumenda similique modi praesentium exercitationem expedita possimus maiores doloremque molestias vel voluptatibus! Incidunt quam harum quae mollitia aliquam quod dolorem facilis odio dignissimos reiciendis eveniet natus tempora, praesentium assumenda velit animi. Corporis dolore minus sunt ut enim nemo suscipit quae assumenda in cum!",
+      "title": "Bridging Horizons: Global Initiatives for Sustainability",
+      "content": "Across the continents, a global movement emerges as communities unite for sustainability. From renewable energy projects to conservation efforts, initiatives around the world bridge horizons for a greener future. The collective commitment to environmental stewardship paves the way for a sustainable legacy for generations to come.",
       "date": "November 10, 2023"
     },
     {
       "id": 11,
       "userID": 3003,
-      "author": "Author 3",
-      "title": "Article Title 11",
-      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores amet praesentium iure, voluptas, tempora accusantium, labore officiis suscipit asperiores architecto at commodi dolore quas magni adipisci illo beatae alias numquam blanditiis ipsum nam sequi nesciunt. Illum similique suscipit labore assumenda. Id voluptatum laudantium maiores perferendis sequi earum molestias amet, voluptatem dignissimos, minus odit adipisci harum fugiat fugit. Molestias porro quas fugit eum distinctio hic sapiente iusto? Aliquam neque iusto tempore eius beatae repudiandae libero? Minima accusantium neque nihil mollitia aut numquam recusandae repellat non cumque, perspiciatis, ducimus unde nisi totam quaerat! Architecto, iure quas, nemo nam nihil minima maiores fuga quo expedita repellendus, eum sit eaque dolore corporis atque qui nisi ullam ex iste quasi eligendi labore. Debitis soluta corrupti magni beatae dolore quos dolores natus tempore? Blanditiis quisquam deleniti temporibus, ab, facere perspiciatis vero repellat debitis maiores, magnam magni. Saepe quasi quos, placeat esse illum ducimus sunt id nihil, assumenda dicta repudiandae rem consectetur voluptatum magni sit harum! Aliquid, quisquam! Odit voluptate dignissimos doloremque nostrum sed, aspernatur, rem distinctio fugiat ab possimus nam! Neque ipsa cupiditate quam laudantium delectus quo placeat voluptate accusamus rerum qui corporis impedit eum, beatae non eos consequatur. Pariatur accusantium, vitae aspernatur quis reiciendis suscipit dignissimos vero voluptates blanditiis aut nostrum ipsam? Dolorem, repudiandae reprehenderit? Repellat iusto in optio, ipsa provident vel inventore sapiente dolorum quasi, rerum quam. Consequatur dolor minus earum minima praesentium cum iure repellendus quasi omnis eum laudantium, doloribus similique, architecto rerum accusamus repudiandae. Autem vero delectus fugit qui nulla optio non. Quam delectus iste sequi itaque corporis necessitatibus culpa facere amet?",
+      "title": "The Enchanting World of Mythical Creatures",
+      "content": "Journey into the realm of mythical creatures, where legendary beasts and magical beings come to life. From dragons soaring the skies to unicorns in enchanted forests, myths and folklore weave tales of wonder and mystery. Explore the rich tapestry of cultures that have given birth to these captivating creatures.",
       "date": "November 11, 2023"
     },
     {
       "id": 12,
-      "userID": 3003,
-      "author": "Author 3",
-      "title": "Article Title 12",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tempora, ea rerum modi ex eos id! Incidunt eveniet alias, recusandae, cum doloremque soluta voluptas adipisci perspiciatis tempore illum, praesentium harum hic dicta quidem suscipit cumque. A, impedit? Ipsa, consequuntur adipisci eveniet ut fuga expedita, officiis optio a laboriosam sapiente culpa veritatis incidunt praesentium amet consequatur obcaecati non deserunt libero assumenda rerum itaque, nesciunt sed perspiciatis? Culpa explicabo earum minima qui ab iste deleniti itaque facilis perspiciatis, placeat, quibusdam dolorum voluptatum quo quos! Illo cupiditate fugiat nobis eveniet quod, repellat perspiciatis atque porro animi quidem quo aliquid vero! Voluptatem, laborum. Quidem distinctio soluta perferendis repudiandae quasi dolore optio ea tempora neque voluptatibus pariatur a voluptates necessitatibus quam laudantium vero, sunt voluptatem ipsam quo iste? Alias fugiat animi ea blanditiis, itaque nulla quas dolorum sunt tempora cumque facilis quisquam velit laboriosam ducimus!",
+      "userID": 3002,
+      "title": "Innovations in Space Tourism: Journey Beyond the Stars",
+      "content": "Space tourism opens new frontiers for adventurous travelers. With advancements in aerospace technology, civilians now have the opportunity to journey beyond our planet. From orbital hotels to lunar excursions, innovations in space tourism promise an out-of-this-world experience for those seeking the ultimate adventure.",
       "date": "November 12, 2023"
+    },
+    {
+      "id": 13,
+      "userID": 3007,
+      "title": "Harmony of Music and Technology: The Future of Sound",
+      "content": "Witness the convergence of music and technology, shaping the future of auditory experiences. From AI-generated compositions to immersive virtual concerts, the boundaries of sound are expanding. Explore the innovations that harmonize the artistry of music with cutting-edge technological advancements.",
+      "date": "November 13, 2023"
+    },
+    {
+      "id": 14,
+      "userID": 3005,
+      "title": "Empowering Communities: Technology for Social Change",
+      "content": "Technology becomes a catalyst for social change as communities harness its power for empowerment. From digital education initiatives to grassroots movements, explore how technology is bridging gaps and creating positive impact. Join the journey of change-makers using innovation for the betterment of society.",
+      "date": "November 14, 2023"
+    },
+    {
+      "id": 15,
+      "userID": 3006,
+      "title": "The Dance of Particles: Exploring Particle Physics",
+      "content": "Embark on a subatomic journey into the fascinating world of particle physics. Scientists unravel the dance of particles, from quarks to leptons, unveiling the fundamental building blocks of the universe. Discover the mysteries of particle accelerators and the quest to understand the forces that shape our reality.",
+      "date": "November 15, 2023"
+    },
+    {
+      "id": 16,
+      "userID": 3004,
+      "title": "Symbiosis in Nature: Exploring Ecological Relationships",
+      "content": "Delve into the intricate web of ecological relationships that sustain life on Earth. From mutualistic partnerships to the delicate balance of ecosystems, explore the wonders of symbiosis in nature. Gain insights into the interconnectedness of species and the importance of preserving biodiversity for a resilient planet.",
+      "date": "November 16, 2023"
+    },
+    {
+      "id": 17,
+      "userID": 3005,
+      "title": "The Artisan's Craft: Preserving Traditional Handicrafts",
+      "content": "Journey into the world of traditional handicrafts, where artisans preserve age-old techniques and cultural heritage. From intricate textiles to hand-carved sculptures, each creation tells a story of craftsmanship and tradition. Explore the significance of supporting and preserving these timeless expressions of human creativity.",
+      "date": "November 17, 2023"
+    },
+    {
+      "id": 18,
+      "userID": 3002,
+      "title": "Urban Farming Revolution: Growing Sustainability",
+      "content": "Cities embrace the urban farming revolution, turning rooftops and vacant lots into flourishing gardens. Explore the intersection of agriculture and urban living, where communities cultivate sustainable practices. From vertical farming to community gardens, witness the growth of a greener and more sustainable urban landscape.",
+      "date": "November 18, 2023"
+    },
+    {
+      "id": 19,
+      "userID": 3001,
+      "title": "The Evolution of Artificial Intelligence in Healthcare",
+      "content": "Experience the transformative journey of artificial intelligence in revolutionizing healthcare. From diagnostics to personalized medicine, AI holds the promise of improving patient outcomes. Dive into the ethical considerations and challenges as we navigate the evolving landscape of AI in the realm of health and wellness.",
+      "date": "November 19, 2023"
+    },
+    {
+      "id": 20,
+      "userID": 3003,
+      "title": "Exploring the Mind: Neuroscientific Discoveries",
+      "content": "Unravel the mysteries of the mind through neuroscientific discoveries. From brain imaging technologies to the understanding of neural pathways, explore the frontiers of neuroscience. Witness how advancements in our understanding of the brain impact fields ranging from psychology to artificial intelligence.",
+      "date": "November 20, 2023"
     }
   ]
 }

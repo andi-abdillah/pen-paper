@@ -2,7 +2,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Card from "../../components/Card";
 import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { debounce } from "lodash"; // Import debounce from lodash
 import PrimaryButton from "../../components/PrimaryButton";
@@ -10,7 +10,6 @@ import Icon from "../../components/Icon";
 import articles from "../../utils/articles.json";
 
 const Explore = () => {
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search"));
   const [filteredArticles, setFilteredArticles] = useState([]);
@@ -37,10 +36,6 @@ const Explore = () => {
 
   const handleLoadMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 4);
-  };
-
-  const handleCardClick = (id) => {
-    navigate(`/story-details/${id}`);
   };
 
   return (
@@ -84,11 +79,7 @@ const Explore = () => {
         </div>
         <div className="flex flex-wrap justify-between mt-6">
           {filteredArticles.slice(0, visibleItems).map((article, index) => (
-            <Card
-              key={index}
-              {...article}
-              onClick={() => handleCardClick(article.id)}
-            />
+            <Card key={index} {...article} />
           ))}
         </div>
         {visibleItems < filteredArticles.length && (

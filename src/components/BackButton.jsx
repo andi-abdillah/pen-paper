@@ -4,7 +4,7 @@ const BackButton = () => {
   const navigate = useNavigate();
   return (
     <button
-      className="flex items-center gap-1.5 text-lg text-primary font-semibold transition duration-100 ease-in-out hover:scale-[1.025]"
+      className="flex items-center gap-1.5 my-8 text-lg text-primary font-semibold transition duration-100 ease-in-out hover:scale-[1.025]"
       onClick={() => navigate(-1)}
     >
       <svg

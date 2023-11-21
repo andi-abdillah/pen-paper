@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import articles from "../../utils/articles.json";
 import Card from "../../components/Card";
 import Icon from "../../components/Icon";
@@ -13,12 +13,6 @@ const Home = () => {
     "Relationship",
     "Politics",
   ];
-
-  let navigate = useNavigate();
-
-  const handleCardClick = (id) => {
-    navigate(`/story-details/${id}`);
-  };
 
   const filteredArticles = articles.articles
     .filter((article) => article.userID !== 3001)
@@ -62,11 +56,7 @@ const Home = () => {
             Might for you
           </h2>
           {filteredArticles?.map((article, index) => (
-            <Card
-              key={index}
-              {...article}
-              onClick={() => handleCardClick(article.id)}
-            />
+            <Card key={index} {...article} />
           ))}
         </div>
 

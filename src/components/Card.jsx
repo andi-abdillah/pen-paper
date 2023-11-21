@@ -1,5 +1,10 @@
-const Card = ({ author, title, content, date, onClick }) => {
+import { Link } from "react-router-dom";
+import users from "../utils/users.json";
+
+const Card = ({ id, userID, title, content, date }) => {
   const maxContentLength = 200;
+
+  const user = users.users.find((user) => user.userID === userID);
 
   const slicedContent =
     content.length > maxContentLength
@@ -9,14 +14,23 @@ const Card = ({ author, title, content, date, onClick }) => {
   return (
     <div className="card max-w-[525px] text-black mb-10 bg-neutral-50 rounded-3xl drop-shadow-card">
       <div className="card-body">
-        <h2 className="text-lg">{author}</h2>
+        <Link
+          to={`${
+            user.userID === 3001
+              ? "/my-profile"
+              : "/user-profile/" + user.userID
+          }`}
+          className="text-lg"
+        >
+          {user.username}
+        </Link>
         <h1 className="card-title text-3xl">{title}</h1>
         <p>
           <b>{slicedContent}</b> - {date}
         </p>
         <div className="card-actions">
-          <button
-            onClick={onClick}
+          <Link
+            to={`/story-details/${id}`}
             className="flex items-center text-lg text-primary font-semibold transition duration-100 ease-in-out hover:scale-[1.05]"
           >
             Read
@@ -35,7 +49,7 @@ const Card = ({ author, title, content, date, onClick }) => {
                 d="M1 5h12m0 0L9 1m4 4L9 9"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
