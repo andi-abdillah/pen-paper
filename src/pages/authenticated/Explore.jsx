@@ -4,7 +4,7 @@ import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { debounce } from "lodash"; // Import debounce from lodash
+import { debounce, shuffle } from "lodash";
 import PrimaryButton from "../../components/PrimaryButton";
 import Icon from "../../components/Icon";
 import articles from "../../utils/articles.json";
@@ -26,7 +26,7 @@ const Explore = () => {
           : true
       );
 
-    setFilteredArticles(filtered);
+    setFilteredArticles(shuffle(filtered));
   }, [search]);
 
   // Use debounce to delay the execution of handleChange
