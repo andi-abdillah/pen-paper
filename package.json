@@ -1,7 +1,7 @@
 {
   "name": "example-app",
   "version": "0.1.0",
-  "homepage": "https://andi-abdillah.github.io/pen-paper",
+  "homepage": "https://andi-abdillah.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

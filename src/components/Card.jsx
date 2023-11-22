@@ -20,7 +20,7 @@ const Card = ({ id, userID, title, content, date }) => {
               ? "/my-profile"
               : "/user-profile/" + user.userID
           }`}
-          className="text-lg"
+          className="text-lg w-max"
         >
           {user.username}
         </Link>

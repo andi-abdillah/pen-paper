@@ -1,7 +1,7 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Divider from "../../components/Divider";
 import BackButton from "../../components/BackButton";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import articles from "../../utils/articles.json";
 import users from "../../utils/users.json";
@@ -53,7 +53,16 @@ const StoryDetails = () => {
         <BackButton />
 
         <div className="flex flex-col gap-6 max-w-2xl xs:mx-8 text-lg font-semibold">
-          <h2 className="text-black text-2xl">{user.username}</h2>
+          <Link
+            to={`${
+              user.userID === 3001
+                ? "/my-profile"
+                : "/user-profile/" + user.userID
+            }`}
+            className="text-black text-2xl w-max"
+          >
+            {user.username}
+          </Link>
           <h3 className="text-gray-700">{article.date}</h3>
           <h3 className="text-gray-500">Article Description</h3>
           <p>{article.content}</p>
