@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AuthenticatedLayout from "./layouts/AuthenticatedLayout";
 import Home from "./pages/authenticated/Home";
 import Explore from "./pages/authenticated/Explore";
@@ -15,25 +15,23 @@ import UserProfile from "./pages/authenticated/UserProfile";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AuthenticatedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="your-stories" element={<YourStories />}>
-            <Route index element={<Stories />} />
-            <Route path="create" element={<CreateStory />} />
-          </Route>
-          <Route path="story-details/:id" element={<StoryDetails />} />
-          <Route path="explore" element={<Explore />} />
-          <Route path="my-profile" element={<MyProfile />} />
-          <Route path="user-profile/:id" element={<UserProfile />} />
+    <Routes>
+      <Route path="" element={<AuthenticatedLayout />}>
+        <Route index element={<Home />} />
+        <Route path="your-stories" element={<YourStories />}>
+          <Route index element={<Stories />} />
+          <Route path="create" element={<CreateStory />} />
         </Route>
-        {/* <Route path="/" element={<WelcomePage />} /> */}
-        <Route path="*" element={<PageNotFound />} />
-        <Route path="sign-in" element={<Login />} />
-        <Route path="register" element={<Register />} />
-      </Routes>
-    </BrowserRouter>
+        <Route path="story-details/:id" element={<StoryDetails />} />
+        <Route path="explore" element={<Explore />} />
+        <Route path="my-profile" element={<MyProfile />} />
+        <Route path="user-profile/:id" element={<UserProfile />} />
+      </Route>
+      {/* <Route path="/" element={<WelcomePage />} /> */}
+      <Route path="*" element={<PageNotFound />} />
+      <Route path="sign-in" element={<Login />} />
+      <Route path="register" element={<Register />} />
+    </Routes>
   );
 }
 
