@@ -4,7 +4,7 @@ import { useAuth } from "../auth/AuthContext";
 
 const Navbar = () => {
   const location = useLocation();
-  const { logout, loggedInUser } = useAuth();
+  const { logout } = useAuth();
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -79,11 +79,9 @@ const Navbar = () => {
             >
               <Link to="/explore">Explore</Link>
             </li>
-            {loggedInUser && (
-              <li className={mediumInActive} onClick={() => logout()}>
-                <button>Logout</button>
-              </li>
-            )}
+            <li className={mediumInActive} onClick={() => logout()}>
+              <button>Logout</button>
+            </li>
           </ul>
         </div>
         <Link
@@ -108,11 +106,9 @@ const Navbar = () => {
           <li className={path.home ? largeActive : largeInActive}>
             <Link to="/">Home</Link>
           </li>
-          {loggedInUser && (
-            <li className={largeInActive} onClick={() => logout()}>
-              <button>Logout</button>
-            </li>
-          )}
+          <li className={largeInActive} onClick={() => logout()}>
+            <button>Logout</button>
+          </li>
         </ul>
       </div>
     </nav>
