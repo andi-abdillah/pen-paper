@@ -1,20 +1,62 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Divider from "../../components/Divider";
 import BackButton from "../../components/BackButton";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import articles from "../../utils/articles.json";
 import users from "../../utils/users.json";
 import { useAuth } from "../../auth/AuthContext";
+import Icon from "../../components/Icon";
+import PrimaryButton from "../../components/PrimaryButton";
+import SecondaryButton from "../../components/SecondaryButton";
+
+const DeleteAlert = ({ isOpen, onClose, navigate }) => {
+  if (!isOpen) {
+    return null;
+  }
+
+  const handleConfirmDelete = () => {
+    onClose();
+    navigate("/your-stories");
+  };
+
+  return (
+    <div className="fixed inset-0 flex justify-center h-max mt-36 z-20">
+      <div className="modal-box">
+        <h3 className="m-4 font-bold text-lg text-red-500">
+          Are you sure want to delete this article?
+        </h3>
+        <div className="modal-action">
+          <PrimaryButton onClick={handleConfirmDelete}>Confirm</PrimaryButton>
+          <SecondaryButton onClick={onClose}>Cancel</SecondaryButton>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const StoryDetails = () => {
   const { id } = useParams();
 
   const { loggedInUser } = useAuth();
 
+  const [isMyArticle, setIsMyArticle] = useState(false);
+
   const [user, setUser] = useState({});
 
   const [article, setArticle] = useState(null);
+
+  const navigate = useNavigate();
+
+  const [alertOpen, setAlertOpen] = useState(false);
+
+  const openAlert = () => {
+    setAlertOpen(true);
+  };
+
+  const closeAlert = () => {
+    setAlertOpen(false);
+  };
 
   useEffect(() => {
     const foundArticle = articles.find(
@@ -27,8 +69,12 @@ const StoryDetails = () => {
         (user) => user.userID === foundArticle.userID
       );
       setUser(findUser);
+
+      if (findUser.userID === loggedInUser.userID) {
+        setIsMyArticle(true);
+      }
     }
-  }, [id]);
+  }, [id, loggedInUser.userID]);
 
   if (!article) {
     return (
@@ -40,6 +86,10 @@ const StoryDetails = () => {
       </div>
     );
   }
+
+  const handleEditStory = () => {
+    navigate(`/your-stories/${id}/edit`);
+  };
 
   return (
     <>
@@ -53,9 +103,37 @@ const StoryDetails = () => {
         <h1 className="text-3xl xs:text-5xl mb-8">{article.title}</h1>
         <Divider />
 
-        <BackButton />
+        <div className="flex justify-between items-center">
+          <BackButton />
+          {isMyArticle && (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0}>
+                <Icon className="text-4xl cursor-pointer">more_horiz</Icon>
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] py-4 text-center font-semibold drop-shadow-card bg-base-100 rounded-box w-max"
+              >
+                <li className="mx-5 mb-2 cursor-pointer">
+                  <span onClick={handleEditStory}>Edit story</span>
+                </li>
+                <Divider />
+                <li className="mx-5 mt-2 text-red-500 cursor-pointer">
+                  <span onClick={openAlert}>Delete story</span>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+        <Divider />
 
-        <div className="flex flex-col gap-6 max-w-2xl xs:mx-8 text-lg font-semibold">
+        <DeleteAlert
+          isOpen={alertOpen}
+          onClose={closeAlert}
+          navigate={navigate}
+        />
+
+        <div className="flex flex-col gap-6 max-w-2xl xs:mx-8 mt-8 text-lg font-semibold">
           <Link
             to={`${
               user.userID === loggedInUser.userID

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
 import TextArea from "../../components/TextArea";
@@ -6,12 +6,32 @@ import PrimaryButton from "../../components/PrimaryButton";
 import Icon from "../../components/Icon";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import BackButton from "../../components/BackButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import articles from "../../utils/articles.json";
+import { useAuth } from "../../auth/AuthContext";
 
-const CreateStory = () => {
-  const [isProcessing, setIsProcessing] = useState(false);
+const EditStory = () => {
+  const { id } = useParams();
+
+  const { loggedInUser } = useAuth();
 
   const navigate = useNavigate();
+
+  const [article, setArticle] = useState(null);
+
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  useEffect(() => {
+    const foundArticle = articles.find(
+      (article) =>
+        article.id === parseInt(id) && article.userID === loggedInUser.userID
+    );
+    if (!foundArticle) navigate("/your-stories");
+
+    setArticle(foundArticle);
+  }, [id, loggedInUser.userID, navigate]);
+
+  console.log(article);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +40,6 @@ const CreateStory = () => {
 
     setTimeout(() => {
       setIsProcessing(false);
-      navigate("/your-stories");
     }, 2000);
   };
 
@@ -28,14 +47,14 @@ const CreateStory = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Create A Story</title>
+          <title>Edit Story</title>
         </Helmet>
       </HelmetProvider>
 
       <BackButton />
 
       <h2 className="mx-2 my-6 text-2xl text-primary font-semibold">
-        Create a story
+        Edit Story
       </h2>
 
       <div className="px-6 py-2 border-[1.2px] border-gray-400 rounded-2xl">
@@ -48,8 +67,8 @@ const CreateStory = () => {
             id="title"
             name="title"
             placeholder="Add title"
+            defaultValue={article?.title}
             className="border-0 my-3 font-semibold"
-            isFocused
             required
           />
 
@@ -59,6 +78,7 @@ const CreateStory = () => {
             id="content"
             name="content"
             placeholder="Write here"
+            defaultValue={article?.content}
             className="border-0 mt-3"
             cols="30"
             rows="20"
@@ -88,4 +108,4 @@ const CreateStory = () => {
   );
 };
 
-export default CreateStory;
+export default EditStory;

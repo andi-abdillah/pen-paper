@@ -9,6 +9,7 @@ import Login from "./pages/guest/Login";
 import Register from "./pages/guest/Register";
 import Stories from "./pages/authenticated/Stories";
 import CreateStory from "./pages/authenticated/CreateStory";
+import EditStory from "./pages/authenticated/EditStory";
 import StoryDetails from "./pages/authenticated/StoryDetails";
 import UserProfile from "./pages/authenticated/UserProfile";
 import { AuthProvider } from "./auth/AuthContext";
@@ -24,6 +25,7 @@ function App() {
           <Route path="your-stories" element={<YourStories />}>
             <Route index element={<Stories />} />
             <Route path="create" element={<CreateStory />} />
+            <Route path=":id/edit" element={<EditStory />} />
           </Route>
           <Route path="explore" element={<Explore />} />
           <Route path="story-details/:id" element={<StoryDetails />} />
