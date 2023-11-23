@@ -2,9 +2,12 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
 import Divider from "../../components/Divider";
 import users from "../../utils/users.json";
+import { useAuth } from "../../auth/AuthContext";
 
 const YourStories = () => {
-  const user = users.users.find((user) => user.userID === 3001);
+  const { loggedInUser } = useAuth();
+
+  const user = users.find((user) => user.userID === loggedInUser.userID);
 
   return (
     <div>

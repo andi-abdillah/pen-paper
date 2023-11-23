@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
 
 const Navbar = () => {
   const location = useLocation();
+  const { logout, loggedInUser } = useAuth();
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    setIsScrolled(scrollTop > 0);
+    setIsScrolled(scrollTop > 15);
   };
 
   useEffect(() => {
@@ -76,6 +79,11 @@ const Navbar = () => {
             >
               <Link to="/explore">Explore</Link>
             </li>
+            {loggedInUser && (
+              <li className={mediumInActive} onClick={() => logout()}>
+                <button>Logout</button>
+              </li>
+            )}
           </ul>
         </div>
         <Link
@@ -100,6 +108,11 @@ const Navbar = () => {
           <li className={path.home ? largeActive : largeInActive}>
             <Link to="/">Home</Link>
           </li>
+          {loggedInUser && (
+            <li className={largeInActive} onClick={() => logout()}>
+              <button>Logout</button>
+            </li>
+          )}
         </ul>
       </div>
     </nav>

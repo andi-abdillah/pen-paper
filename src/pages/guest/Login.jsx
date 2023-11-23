@@ -1,8 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TextInput from "../../components/TextInput";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useEffect, useState } from "react";
+import { useAuth } from "../../auth/AuthContext";
+import users from "../../utils/users.json";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+  const { login, loggedInUser } = useAuth();
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const user = users.find((userData) => userData.email === formData.email);
+
+    if (user && user.password === formData.password) {
+      login(user);
+      navigate("/");
+    } else {
+      alert("Invalid email or password");
+    }
+  };
+
+  useEffect(() => {
+    if (loggedInUser) {
+      navigate(-1);
+    }
+  }, [loggedInUser, navigate]);
+
   return (
     <>
       <HelmetProvider>
@@ -12,17 +47,22 @@ const Login = () => {
       </HelmetProvider>
 
       <div className="flex justify-center w-screen min-h-screen bg-primary">
-        <div className="mx-6 my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
-          <h1 className="max-w-md hidden sm:block text-primary sm:text-5xl md:text-6xl">
+        <div className="mx-6 my-auto lg:my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
+          <h1 className="max-w-md text-primary text-4xl sm:text-5xl md:text-6xl">
             Join the community.
           </h1>
           <div className="w-full sm:max-w-xs mx-auto mt-16">
-            <form action="" className="flex flex-col gap-4">
+            <form
+              action=""
+              onSubmit={handleLogin}
+              className="flex flex-col gap-4"
+            >
               <TextInput
                 id="email"
                 name="email"
                 type="email"
-                defaultValue=""
+                defaultValue={formData.email}
+                onChange={handleInputChange}
                 placeholder="Email"
                 className="text-center"
                 required
@@ -32,7 +72,8 @@ const Login = () => {
                 id="password"
                 name="password"
                 type="password"
-                defaultValue=""
+                defaultValue={formData.password}
+                onChange={handleInputChange}
                 placeholder="Password"
                 className="text-center"
                 required

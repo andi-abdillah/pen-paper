@@ -15,12 +15,12 @@ const UserProfile = () => {
   const [userArticles, setUserArticles] = useState([]);
 
   useEffect(() => {
-    const foundUser = users.users.find((user) => user.userID === parseInt(id));
+    const foundUser = users.find((user) => user.userID === parseInt(id));
 
     if (foundUser) {
       setUser(foundUser);
 
-      const foundArticles = articles.articles.filter(
+      const foundArticles = articles.filter(
         (article) => article.userID === foundUser.userID
       );
 

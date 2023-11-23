@@ -4,17 +4,20 @@ import articles from "../../utils/articles.json";
 import Card from "../../components/Card";
 import Icon from "../../components/Icon";
 import { useEffect, useState } from "react";
+import { useAuth } from "../../auth/AuthContext";
 
 const Stories = () => {
+  const { loggedInUser } = useAuth();
+
   const navigate = useNavigate();
   const [myArticles, setMyArticles] = useState([]);
 
   useEffect(() => {
-    const foundArticles = articles.articles.filter(
-      (article) => article.userID === 3001
+    const foundArticles = articles.filter(
+      (article) => article.userID === loggedInUser.userID
     );
     setMyArticles(foundArticles);
-  }, []);
+  }, [loggedInUser.userID]);
 
   return (
     <>

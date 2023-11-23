@@ -5,22 +5,25 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import articles from "../../utils/articles.json";
 import users from "../../utils/users.json";
+import { useAuth } from "../../auth/AuthContext";
 
 const StoryDetails = () => {
   const { id } = useParams();
+
+  const { loggedInUser } = useAuth();
 
   const [user, setUser] = useState({});
 
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    const foundArticle = articles.articles.find(
+    const foundArticle = articles.find(
       (article) => article.id === parseInt(id)
     );
 
     if (foundArticle) {
       setArticle(foundArticle);
-      const findUser = users.users.find(
+      const findUser = users.find(
         (user) => user.userID === foundArticle.userID
       );
       setUser(findUser);
@@ -55,7 +58,7 @@ const StoryDetails = () => {
         <div className="flex flex-col gap-6 max-w-2xl xs:mx-8 text-lg font-semibold">
           <Link
             to={`${
-              user.userID === 3001
+              user.userID === loggedInUser.userID
                 ? "/my-profile"
                 : "/user-profile/" + user.userID
             }`}

@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import Icon from "../../components/Icon";
 import PrimaryButton from "../../components/PrimaryButton";
 import Banner from "../../assets/banner.jpeg";
+import { useAuth } from "../../auth/AuthContext";
 
 const Home = () => {
   const topics = [
@@ -14,8 +15,10 @@ const Home = () => {
     "Politics",
   ];
 
-  const filteredArticles = articles.articles
-    .filter((article) => article.userID !== 3001)
+  const { loggedInUser } = useAuth();
+
+  const filteredArticles = articles
+    .filter((article) => article.userID !== loggedInUser.userID)
     .slice(0, 7);
 
   return (

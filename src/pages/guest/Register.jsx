@@ -1,8 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TextInput from "../../components/TextInput";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useAuth } from "../../auth/AuthContext";
+import { useEffect } from "react";
 
 const Register = () => {
+  const { loggedInUser } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedInUser) {
+      navigate(-1);
+    }
+  }, [loggedInUser, navigate]);
+
   return (
     <>
       <HelmetProvider>
@@ -11,9 +22,9 @@ const Register = () => {
         </Helmet>
       </HelmetProvider>
 
-      <div className="flex justify-center items-center w-screen min-h-screen bg-primary">
-        <div className="mx-6 my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
-          <h1 className="max-w-md hidden sm:block text-primary sm:text-5xl md:text-6xl">
+      <div className="flex justify-center w-screen min-h-screen bg-primary">
+        <div className="mx-6 my-auto lg:my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
+          <h1 className="max-w-md text-primary text-4xl sm:text-5xl md:text-6xl">
             Join the community.
           </h1>
           <div className="w-full sm:max-w-xs mx-auto mt-16">

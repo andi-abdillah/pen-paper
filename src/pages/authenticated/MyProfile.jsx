@@ -3,9 +3,12 @@ import PrimaryButton from "../../components/PrimaryButton";
 import Divider from "../../components/Divider";
 import Icon from "../../components/Icon";
 import users from "../../utils/users.json";
+import { useAuth } from "../../auth/AuthContext";
 
 const MyProfile = () => {
-  const user = users.users.find((user) => user.userID === 3001);
+  const { loggedInUser } = useAuth();
+
+  const user = users.find((user) => user.userID === loggedInUser.userID);
 
   return (
     <div>

@@ -1,41 +1,65 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import Card from "../../components/Card";
 import TextInput from "../../components/TextInput";
 import Divider from "../../components/Divider";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { debounce, shuffle } from "lodash";
 import PrimaryButton from "../../components/PrimaryButton";
-import Icon from "../../components/Icon";
-import articles from "../../utils/articles.json";
+import articlesData from "../../utils/articles.json";
+import usersData from "../../utils/users.json";
+import ExploreTopics from "./ExploreTopics";
+import ExploreAccount from "./ExploreAccount";
+import { useAuth } from "../../auth/AuthContext";
 
 const Explore = () => {
   const [searchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search"));
-  const [filteredArticles, setFilteredArticles] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
   const [visibleItems, setVisibleItems] = useState(4);
+  const [selectedTab, setSelectedTab] = useState("topics");
+  const [usersList, setUsersList] = useState([]);
+
+  const { loggedInUser } = useAuth();
 
   useEffect(() => {
-    // Filter articles based on search keyword in title or content
-    const filtered = articles.articles
-      .filter((article) => article.userID !== 3001)
-      .filter((article) =>
-        search
-          ? article.title.toLowerCase().includes(search.toLowerCase()) ||
-            article.content.toLowerCase().includes(search.toLowerCase())
-          : true
-      );
+    const filterItems = () => {
+      if (selectedTab === "topics") {
+        const filteredArticles = articlesData
+          .filter((article) => article.userID !== loggedInUser.userID)
+          .filter((article) =>
+            search
+              ? article.title.toLowerCase().includes(search.toLowerCase()) ||
+                article.content.toLowerCase().includes(search.toLowerCase())
+              : true
+          );
+        setFilteredItems(shuffle(filteredArticles));
+      } else {
+        if (search) {
+          const filteredUsers = usersData
+            .filter((user) => user.userID !== loggedInUser.userID)
+            .filter((user) =>
+              search
+                ? user.username.toLowerCase().includes(search.toLowerCase())
+                : true
+            );
+          setUsersList(filteredUsers);
+        }
+      }
+    };
 
-    setFilteredArticles(shuffle(filtered));
-  }, [search]);
+    filterItems();
+  }, [search, selectedTab, loggedInUser.userID]);
 
-  // Use debounce to delay the execution of handleChange
   const debouncedSearch = debounce((value) => setSearch(value), 1000);
 
   const handleChange = (e) => debouncedSearch(e.target.value);
 
   const handleLoadMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 4);
+  };
+
+  const handleTabChange = (tab) => {
+    setSelectedTab((prevTab) => (prevTab === tab ? prevTab : tab));
   };
 
   return (
@@ -72,21 +96,42 @@ const Explore = () => {
             name="search"
             type="text"
             defaultValue={search}
-            className="pl-12"
-            placeholder="Search Topics"
+            className="pl-12 capitalize"
+            placeholder={`Search ` + selectedTab}
             onChange={handleChange}
           />
         </div>
-        <div className="flex flex-wrap justify-between mt-6">
-          {filteredArticles.slice(0, visibleItems).map((article, index) => (
-            <Card key={index} {...article} />
-          ))}
-        </div>
-        {visibleItems < filteredArticles.length && (
-          <PrimaryButton className="m-auto" onClick={handleLoadMore}>
-            Load More<Icon>arrow_circle_down</Icon>
+
+        <div className="flex gap-3">
+          <PrimaryButton
+            onClick={() => handleTabChange("topics")}
+            disabled={selectedTab === "topics"}
+          >
+            Topics
           </PrimaryButton>
-        )}
+          <PrimaryButton
+            onClick={() => handleTabChange("account")}
+            disabled={selectedTab === "account"}
+          >
+            Account
+          </PrimaryButton>
+        </div>
+
+        <div className="mt-6">
+          {selectedTab === "topics" && (
+            <ExploreTopics
+              filteredItems={filteredItems}
+              visibleItems={visibleItems}
+              handleLoadMore={handleLoadMore}
+            />
+          )}
+          {selectedTab === "account" && (
+            <ExploreAccount
+              usersList={usersList}
+              loggedInUserID={loggedInUser.userID}
+            />
+          )}
+        </div>
       </div>
     </>
   );

@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import users from "../utils/users.json";
+import { useAuth } from "../auth/AuthContext";
 
 const Card = ({ id, userID, title, content, date }) => {
+  const { loggedInUser } = useAuth();
+
   const maxContentLength = 200;
 
-  const user = users.users.find((user) => user.userID === userID);
+  const user = users.find((user) => user.userID === userID);
 
   const slicedContent =
     content.length > maxContentLength
@@ -16,7 +19,7 @@ const Card = ({ id, userID, title, content, date }) => {
       <div className="card-body">
         <Link
           to={`${
-            user.userID === 3001
+            user.userID === loggedInUser.userID
               ? "/my-profile"
               : "/user-profile/" + user.userID
           }`}
