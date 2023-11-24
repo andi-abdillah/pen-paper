@@ -40,6 +40,7 @@ const EditStory = () => {
 
     setTimeout(() => {
       setIsProcessing(false);
+      navigate("/your-stories");
     }, 2000);
   };
 

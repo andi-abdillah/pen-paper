@@ -7,33 +7,7 @@ import articles from "../../utils/articles.json";
 import users from "../../utils/users.json";
 import { useAuth } from "../../auth/AuthContext";
 import Icon from "../../components/Icon";
-import PrimaryButton from "../../components/PrimaryButton";
-import SecondaryButton from "../../components/SecondaryButton";
-
-const DeleteAlert = ({ isOpen, onClose, navigate }) => {
-  if (!isOpen) {
-    return null;
-  }
-
-  const handleConfirmDelete = () => {
-    onClose();
-    navigate("/your-stories");
-  };
-
-  return (
-    <div className="fixed inset-0 flex justify-center h-max mt-36 z-20">
-      <div className="modal-box">
-        <h3 className="m-4 font-bold text-lg text-red-500">
-          Are you sure want to delete this article?
-        </h3>
-        <div className="modal-action">
-          <PrimaryButton onClick={handleConfirmDelete}>Confirm</PrimaryButton>
-          <SecondaryButton onClick={onClose}>Cancel</SecondaryButton>
-        </div>
-      </div>
-    </div>
-  );
-};
+import DeleteAlert from "../../components/DeleteAlert";
 
 const StoryDetails = () => {
   const { id } = useParams();
