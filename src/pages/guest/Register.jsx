@@ -1,19 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TextInput from "../../components/TextInput";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useAuth } from "../../auth/AuthContext";
-import { useEffect } from "react";
 
 const Register = () => {
-  const { loggedInUser } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (loggedInUser) {
-      navigate(-1);
-    }
-  }, [loggedInUser, navigate]);
-
   return (
     <>
       <HelmetProvider>
@@ -25,7 +14,7 @@ const Register = () => {
       <div className="flex justify-center w-screen min-h-screen bg-primary">
         <div className="mx-6 my-auto lg:my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
           <h1 className="max-w-md text-primary text-4xl sm:text-5xl md:text-6xl">
-            Join the community.
+            <Link to="/">Join the community.</Link>
           </h1>
           <div className="w-full sm:max-w-xs mx-auto mt-16">
             <form action="" className="flex flex-col gap-4">
@@ -66,9 +55,11 @@ const Register = () => {
             </form>
           </div>
           <center className="my-6 text-lg">
-            Already have an account?
-            <Link to="/sign-in" className="text-primary font-semibold">
-              {" "}
+            Already have an account?{" "}
+            <Link
+              to="/sign-in"
+              className="text-primary font-semibold inline-block"
+            >
               Sign In
             </Link>
           </center>

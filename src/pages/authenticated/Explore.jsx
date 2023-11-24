@@ -36,7 +36,7 @@ const Explore = () => {
       } else {
         if (search) {
           const filteredUsers = usersData
-            .filter((user) => user.userID !== loggedInUser.userID)
+            .filter((user) => user.usersetSearchID !== loggedInUser.userID)
             .filter((user) =>
               search
                 ? user.username.toLowerCase().includes(search.toLowerCase())
@@ -123,13 +123,11 @@ const Explore = () => {
               filteredItems={filteredItems}
               visibleItems={visibleItems}
               handleLoadMore={handleLoadMore}
+              search={search}
             />
           )}
-          {selectedTab === "account" && (
-            <ExploreAccount
-              usersList={usersList}
-              loggedInUserID={loggedInUser.userID}
-            />
+          {selectedTab === "account" && search && (
+            <ExploreAccount usersList={usersList} search={search} />
           )}
         </div>
       </div>

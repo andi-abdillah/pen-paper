@@ -43,7 +43,7 @@ const Home = () => {
                 Learn something new today.
               </h1>
               <Link
-                to="/explore"
+                to="explore"
                 className="px-10 py-3.5 text-xl text-white font-semibold bg-primary rounded-lg"
               >
                 Browse Stories
@@ -86,7 +86,7 @@ const Home = () => {
               </li>
             ))}
             <Link
-              to="/explore"
+              to="explore"
               className="flex justify-center items-center mt-8 text-primary font-semibold transition duration-300 ease-in-out hover:scale-[1.025]"
             >
               Browse more topics
@@ -128,7 +128,7 @@ const Home = () => {
             ))}
           </div>
           <Link
-            to="/explore"
+            to="explore"
             className="flex items-center mt-3 text-xl text-primary font-semibold transition duration-300 ease-in-out hover:scale-[1.025]"
           >
             Browse more topics

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import TextInput from "../../components/TextInput";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../../auth/AuthContext";
 import users from "../../utils/users.json";
 
@@ -12,7 +12,7 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
-  const { login, loggedInUser } = useAuth();
+  const { login } = useAuth();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,17 +26,11 @@ const Login = () => {
 
     if (user && user.password === formData.password) {
       login(user);
-      navigate("/");
+      navigate("/dashboard");
     } else {
       alert("Invalid email or password");
     }
   };
-
-  useEffect(() => {
-    if (loggedInUser) {
-      navigate(-1);
-    }
-  }, [loggedInUser, navigate]);
 
   return (
     <>
@@ -49,7 +43,7 @@ const Login = () => {
       <div className="flex justify-center w-screen min-h-screen bg-primary">
         <div className="mx-6 my-auto lg:my-24 p-8 md:p-20 bg-neutral-50 rounded-3xl drop-shadow-card">
           <h1 className="max-w-md text-primary text-4xl sm:text-5xl md:text-6xl">
-            Join the community.
+            <Link to="/">Join the community.</Link>
           </h1>
           <div className="w-full sm:max-w-xs mx-auto mt-16">
             <form
@@ -87,9 +81,11 @@ const Login = () => {
             </form>
           </div>
           <center className="my-6 text-lg">
-            No account yet?
-            <Link to="/register" className="text-primary font-semibold">
-              {" "}
+            No account yet?{" "}
+            <Link
+              to="/register"
+              className="text-primary font-semibold inline-block"
+            >
               Create one
             </Link>
           </center>

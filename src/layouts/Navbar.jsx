@@ -29,10 +29,12 @@ const Navbar = () => {
   const largeInActive = `${largeStyle} hover:text-primary hover:font-medium`;
 
   const path = {
-    home: location.pathname === "/" ? true : false,
-    explore: location.pathname.startsWith("/explore") ? true : false,
-    yourStories: location.pathname.startsWith("/your-stories") ? true : false,
-    myProfile: location.pathname.startsWith("/my-profile") ? true : false,
+    home:
+      location.pathname.startsWith("/dashboard") &&
+      location.pathname.length === 10,
+    explore: location.pathname.startsWith("/dashboard/explore"),
+    yourStories: location.pathname.startsWith("/dashboard/your-stories"),
+    myProfile: location.pathname.startsWith("/dashboard/my-profile"),
   };
 
   return (
@@ -64,28 +66,28 @@ const Navbar = () => {
             className="flex flex-col gap-3 p-6 dropdown-content mt-5 z-[1] drop-shadow-card bg-base-100 rounded-box w-56"
           >
             <li className={path.home ? mediumActive : mediumInActive}>
-              <Link to="/">Home</Link>
+              <Link to="/dashboard">Home</Link>
             </li>
             <li className={path.myProfile ? mediumActive : mediumInActive}>
-              <Link to="/my-profile">Profile</Link>
+              <Link to="my-profile">Profile</Link>
             </li>
             <li className={path.yourStories ? mediumActive : mediumInActive}>
-              <Link to="/your-stories">Your Stories</Link>
+              <Link to="your-stories">Your Stories</Link>
             </li>
             <li
               className={`${
                 path.explore ? mediumActive : mediumInActive
               } justify-start`}
             >
-              <Link to="/explore">Explore</Link>
+              <Link to="explore">Explore</Link>
             </li>
             <li className={mediumInActive} onClick={() => logout()}>
-              <button>Logout</button>
+              <button>Sign Out</button>
             </li>
           </ul>
         </div>
         <Link
-          to="/"
+          to="/dashboard"
           className="font-bold text-2xl md:text-3xl text-primary font-newsreader"
         >
           Pen & Paper
@@ -95,19 +97,19 @@ const Navbar = () => {
       <div className="navbar-end hidden lg:flex">
         <ul className="flex gap-4">
           <li className={path.explore ? largeActive : largeInActive}>
-            <Link to="/explore">Explore</Link>
+            <Link to="explore">Explore</Link>
           </li>
           <li className={path.yourStories ? largeActive : largeInActive}>
-            <Link to="/your-stories">Your Stories</Link>
+            <Link to="your-stories">Your Stories</Link>
           </li>
           <li className={path.myProfile ? largeActive : largeInActive}>
-            <Link to="/my-profile">Profile</Link>
+            <Link to="my-profile">Profile</Link>
           </li>
           <li className={path.home ? largeActive : largeInActive}>
-            <Link to="/">Home</Link>
+            <Link to="/dashboard">Home</Link>
           </li>
           <li className={largeInActive} onClick={() => logout()}>
-            <button>Logout</button>
+            <button>Sign Out</button>
           </li>
         </ul>
       </div>

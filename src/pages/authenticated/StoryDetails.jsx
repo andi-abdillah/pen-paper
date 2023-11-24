@@ -62,7 +62,7 @@ const StoryDetails = () => {
   }
 
   const handleEditStory = () => {
-    navigate(`/your-stories/${id}/edit`);
+    navigate(`/dashboard/your-stories/${id}/edit`);
   };
 
   return (
@@ -111,8 +111,8 @@ const StoryDetails = () => {
           <Link
             to={`${
               user.userID === loggedInUser.userID
-                ? "/my-profile"
-                : "/user-profile/" + user.userID
+                ? "/dashboard/my-profile"
+                : "/dashboard/user-profile/" + user.userID
             }`}
             className="text-black text-2xl w-max"
           >

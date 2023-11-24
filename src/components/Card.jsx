@@ -33,7 +33,7 @@ const Card = ({ id, userID, title, content, date }) => {
         </p>
         <div className="card-actions">
           <Link
-            to={`/story-details/${id}`}
+            to={`/dashboard/story-details/${id}`}
             className="flex items-center text-lg text-primary font-semibold transition duration-100 ease-in-out hover:scale-[1.05]"
           >
             Read

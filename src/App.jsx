@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import AuthenticatedLayout from "./layouts/AuthenticatedLayout";
+import GuestLayout from "./layouts/GuestLayout";
 import Home from "./pages/authenticated/Home";
 import Explore from "./pages/authenticated/Explore";
 import MyProfile from "./pages/authenticated/MyProfile";
@@ -13,13 +14,13 @@ import EditStory from "./pages/authenticated/EditStory";
 import StoryDetails from "./pages/authenticated/StoryDetails";
 import UserProfile from "./pages/authenticated/UserProfile";
 import { AuthProvider } from "./auth/AuthContext";
-// import WelcomePage from "./pages/guest/WelcomePage";
+import WelcomePage from "./pages/guest/WelcomePage";
 
 function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="" element={<AuthenticatedLayout />}>
+        <Route path="/dashboard" element={<AuthenticatedLayout />}>
           <Route index element={<Home />} />
           <Route path="my-profile" element={<MyProfile />} />
           <Route path="your-stories" element={<YourStories />}>
@@ -31,10 +32,12 @@ function App() {
           <Route path="story-details/:id" element={<StoryDetails />} />
           <Route path="user-profile/:id" element={<UserProfile />} />
         </Route>
-        {/* <Route path="/" element={<WelcomePage />} /> */}
+        <Route path="/" element={<GuestLayout />}>
+          <Route index element={<WelcomePage />} />
+          <Route path="sign-in" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route>
         <Route path="*" element={<PageNotFound />} />
-        <Route path="sign-in" element={<Login />} />
-        <Route path="register" element={<Register />} />
       </Routes>
     </AuthProvider>
   );

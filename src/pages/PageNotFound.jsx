@@ -30,7 +30,7 @@ const PageNotFound = () => {
         </div>
         <p class="mt-4 text-gray-600">
           Let's get you back{" "}
-          <Link to="/" class="text-blue-500">
+          <Link to="/dashboard" class="text-blue-500">
             home
           </Link>
           .

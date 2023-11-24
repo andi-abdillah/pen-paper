@@ -8,11 +8,11 @@ const DeleteAlert = ({ isOpen, onClose, navigate }) => {
 
   const handleConfirmDelete = () => {
     onClose();
-    navigate("/your-stories");
+    navigate("/dashboard/your-stories");
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-20">
+    <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="modal-box shadow-xl">
         <h3 className="m-4 font-bold text-lg text-red-500">
           Are you sure want to delete this article?

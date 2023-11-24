@@ -26,12 +26,10 @@ const EditStory = () => {
       (article) =>
         article.id === parseInt(id) && article.userID === loggedInUser.userID
     );
-    if (!foundArticle) navigate("/your-stories");
+    if (!foundArticle) navigate("/dashboard/your-stories");
 
     setArticle(foundArticle);
   }, [id, loggedInUser.userID, navigate]);
-
-  console.log(article);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,7 +38,7 @@ const EditStory = () => {
 
     setTimeout(() => {
       setIsProcessing(false);
-      navigate("/your-stories");
+      navigate("/dashboard/your-stories");
     }, 2000);
   };
 

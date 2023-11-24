@@ -20,7 +20,7 @@ const CreateStory = () => {
 
     setTimeout(() => {
       setIsProcessing(false);
-      navigate("/your-stories");
+      navigate("/dashboard/your-stories");
     }, 2000);
   };
 
