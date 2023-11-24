@@ -29,9 +29,9 @@ const PageNotFound = () => {
           </svg>
         </div>
         <p class="mt-4 text-gray-600">
-          Let's get you back{" "}
-          <Link to="/dashboard" class="text-blue-500">
-            home
+          Let's get you{" "}
+          <Link to={-1} class="text-blue-500">
+            back
           </Link>
           .
         </p>
