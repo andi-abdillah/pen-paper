@@ -108,16 +108,14 @@ const StoryDetails = () => {
         />
 
         <div className="flex flex-col gap-6 max-w-2xl xs:mx-8 mt-8 text-lg font-semibold">
-          <Link
-            to={`${
-              user.userID === loggedInUser.userID
-                ? "/dashboard/my-profile"
-                : "/dashboard/user-profile/" + user.userID
-            }`}
-            className="text-black text-2xl w-max"
-          >
-            {user.username}
-          </Link>
+          {user.userID !== loggedInUser.userID && (
+            <Link
+              to={`/dashboard/user-profile/${user.userID}`}
+              className="text-black text-2xl w-max"
+            >
+              {user.username}
+            </Link>
+          )}
           <h3 className="text-gray-700">{article.date}</h3>
           <h3 className="text-gray-500">Article Description</h3>
           <p>{article.content}</p>

@@ -15,6 +15,8 @@ import StoryDetails from "./pages/authenticated/StoryDetails";
 import UserProfile from "./pages/authenticated/UserProfile";
 import { AuthProvider } from "./auth/AuthContext";
 import WelcomePage from "./pages/guest/WelcomePage";
+import UserDescriptions from "./pages/authenticated/UserDescriptions";
+import CreateUserDescriptions from "./pages/authenticated/CreateUserDescriptions";
 
 function App() {
   return (
@@ -22,7 +24,13 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<AuthenticatedLayout />}>
           <Route index element={<Home />} />
-          <Route path="my-profile" element={<MyProfile />} />
+          <Route path="my-profile" element={<MyProfile />}>
+            <Route index element={<UserDescriptions />} />
+            <Route
+              path="descriptions/create"
+              element={<CreateUserDescriptions />}
+            />
+          </Route>
           <Route path="your-stories" element={<YourStories />}>
             <Route index element={<Stories />} />
             <Route path="create" element={<CreateStory />} />

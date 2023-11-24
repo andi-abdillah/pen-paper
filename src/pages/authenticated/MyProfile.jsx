@@ -1,9 +1,8 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import PrimaryButton from "../../components/PrimaryButton";
 import Divider from "../../components/Divider";
-import Icon from "../../components/Icon";
 import users from "../../utils/users.json";
 import { useAuth } from "../../auth/AuthContext";
+import { Outlet } from "react-router-dom";
 
 const MyProfile = () => {
   const { loggedInUser } = useAuth();
@@ -31,9 +30,7 @@ const MyProfile = () => {
         <Divider />
 
         <div className="mt-8">
-          <PrimaryButton>
-            Add descriptions<Icon>description</Icon>
-          </PrimaryButton>
+          <Outlet />
         </div>
       </div>
     </div>

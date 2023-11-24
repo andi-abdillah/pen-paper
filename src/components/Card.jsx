@@ -17,16 +17,14 @@ const Card = ({ id, userID, title, content, date }) => {
   return (
     <div className="card max-w-[525px] text-black mb-10 bg-neutral-50 rounded-3xl drop-shadow-card">
       <div className="card-body">
-        <Link
-          to={`${
-            user.userID === loggedInUser.userID
-              ? "/my-profile"
-              : "/user-profile/" + user.userID
-          }`}
-          className="text-lg w-max"
-        >
-          {user.username}
-        </Link>
+        {user.userID !== loggedInUser.userID && (
+          <Link
+            to={`/dashboard/user-profile/${user.userID}`}
+            className="text-lg w-max"
+          >
+            {user.username}
+          </Link>
+        )}
         <h1 className="card-title text-3xl">{title}</h1>
         <p>
           <b>{slicedContent}</b> - {date}
